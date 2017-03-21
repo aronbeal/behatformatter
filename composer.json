@@ -1,11 +1,11 @@
 {
-    "name": "elkan/behatformatter",
-    "description": "This will create a formatter for Behat 3! Fast, Easy and Pretty!",
+    "name": "aronbeal/behatformatter",
+    "description": "Fork of elkan/behatformatter.  Will go away if PR is merged",
     "license": "MIT",
     "authors": [
         {
-            "name": "Elkan Roelen",
-            "email": "roelen@elkan.nl"
+            "name": "Aron Beal",
+            "email": "abeal@eelzee.com"
         }
     ],
     "minimum-stability": "dev",
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "elkan\\BehatFormatter\\": "src/"
+            "aronbeal\\BehatFormatter\\": "src/"
         }
     }
 }
