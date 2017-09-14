@@ -204,7 +204,9 @@ class FileOutputPrinter implements PrinterInterface {
 
     //first create the assets dir
     $destination = $this->outputPath . DIRECTORY_SEPARATOR . 'assets';
-    @mkdir($destination);
+    if(!is_dir($destination)){
+      mkdir($destination);
+    }
 
     $this->recurse_copy($assets_source, $destination . DIRECTORY_SEPARATOR . $renderer);
   }
@@ -216,7 +218,9 @@ class FileOutputPrinter implements PrinterInterface {
    */
   private function recurse_copy($src, $dst) {
     $dir = opendir($src);
-    @mkdir($dst);
+    if(!is_dir($dst)){
+      mkdir($dst);
+    }
     while (FALSE !== ($file = readdir($dir))) {
       if (($file != '.') && ($file != '..')) {
         if (is_dir($src . '/' . $file)) {
